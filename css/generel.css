@@ -18,3 +18,22 @@ main {
     display: flex;
     align-items: center; 
 }
+
+.product_list_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;                          
+    padding: 20px;                         
+}
+
+.product_card img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.img{
+    background-attachment: #b66363;
+}
