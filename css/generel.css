@@ -1,17 +1,18 @@
 main {
     max-width: 1200px;
     margin: 0 auto;    
-    padding: 0 20px;   
+    padding: 0 20px;  
+  
 }
 
-.category_list_container {
+/* .category_list_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
-}
+} */
 
 .category_box {
-    background-color: #8dc3f2; 
+    background-color: #f5f1d3; 
     color: white;          
     text-decoration: none; 
     padding: 40px 20px;    
@@ -23,7 +24,8 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;                          
-    padding: 20px;                         
+    padding: 20px;  
+    background-color: #f7f4df;                       
 }
 
 .product_card img{
@@ -34,6 +36,77 @@ main {
     margin: 0 auto;
 }
 
-.img{
-    background-attachment: #b66363;
+.article{
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+}
+
+
+/* ----Productlist---
+
+.productlist main{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+gap: 1em;
+}
+
+.productlist main h2{
+grid-template-columns: 1/-1;
+}
+ */
+
+
+ /* Gør containeren til udgangspunkt for placeringen */
+
+
+.image_container {
+    position: relative;
+    width: 100%;
+}
+
+/* Selve Sold Out mærket */
+.sold_out_badge {
+    position: absolute; /* Gør at den kan "svæve" over billedet */
+    top: 10px;          /* Afstand fra toppen af billedet */
+    left: 10px;         /* Afstand fra venstre side */
+    background-color: #444; /* Grå farve som på dit eksempelbillede */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 2px;
+    z-index: 10;        /* Sørger for at den ligger øverst */
+}
+
+/* Gør billedet lidt gennemsigtigt hvis varen er udsolgt (valgfrit) */
+.product_card:has(.sold_out_badge) img {
+    opacity: 0.5;
+}
+
+
+
+/* Sørg for at containeren er klar til at holde på mærkerne */
+.image_container {
+    position: relative;
+}
+
+/* Rabat mærket placeres nederst til højre på billedet */
+.discount_badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #621c16; /* Rød farve til rabat */
+    color: white;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+/* Styling af prisen når der er rabat */
+.price span {
+    text-decoration: line-through; /* Streger den gamle pris over */
+    color: #777;
+    margin-right: 10px;
+    font-size: 0.9rem;
 }

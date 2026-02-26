@@ -1,0 +1,11 @@
+.product_info_card{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;;
+}
+
+.tshirt_bilde img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
